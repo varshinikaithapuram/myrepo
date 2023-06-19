@@ -1,0 +1,129 @@
+* {
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+body{
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: fixed;
+    
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #2C3E50;
+    transition: background-color 0.3s ease; 
+}
+.navbar:hover{
+    color: #f00;
+}
+
+.navlist {
+    list-style: none;
+
+}
+
+.navlist li {
+    display: inline;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+.toright {
+    text-align: right;
+    padding-right: 150px;
+    font-size: 25px !important;
+}
+
+header{ background: linear-gradient(to bottom  right,white, lightblue, white);
+    /* background-color: lightblue; */
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+header h1{
+    text-align: center;
+}
+
+header hr{
+    margin: 0 500px  20px 500px;
+    color: whitesmoke;
+    border: 1px solid;
+}
+
+header li{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    font-size: 18px;
+    align-items: center;
+}
+
+.bodysection{
+    
+    margin: 50px;
+}
+
+.bodysection li{
+    font-size: 18px;
+}
+
+.resumesection{
+    margin-top: 100px;
+}
+
+.contactform{
+    background: linear-gradient(to bottom  right, lightblue, white);
+    margin-top: 100px;
+    text-align: center;
+    
+}
+.contactform form{
+    margin-top: 2px;
+    border-radius: 30px;
+
+}
+
+
+.contactform h1{
+    text-align: center;
+}
+
+.contactform hr{
+    margin: 0 500px  20px 500px;
+    border: 1px solid;
+}
+
+.contactform input{
+    padding: 15px;
+    font-size: 18px;
+    margin: 15px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.sociallinks{
+    display: inline;
+}
