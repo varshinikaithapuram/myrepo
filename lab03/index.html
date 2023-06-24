@@ -1,0 +1,58 @@
+<html>
+ 
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">  
+</head>
+<script type="text/javascript" src="calculator.js"></script>
+ 
+<body>
+ 
+<table class="calculator">
+  <tr>
+    <td colspan="4"> <input class="inputfield" type="text" id="result" disabled /> </td>
+  </tr>
+  <tr>
+	<td> <input type="button" value="C" onclick="cleardata()" id="restbutton" /> </td>
+    <td> <input type="button" value="&#x221A;" onclick="display('sqrt')" id="operatorbutton" /> </td>
+    <td> <input type="button" value="&#x221B;" onclick="display('cbrt')" id="operatorbutton" /> </td>
+    <td> <input type="button" value="pow" onclick="display('**')" id="operatorbutton" /> </td>
+
+  </tr>
+  <tr>
+    <td> <input type="button" value="sin" onclick="display('sin')" id="operatorbutton" /> </td>
+      <td> <input type="button" value="cos" onclick="display('cos')" id="operatorbutton" /> </td>
+      <td> <input type="button" value="tan" onclick="display('tan')" id="operatorbutton" /> </td>
+      <td> <input type="button" value="&#xf7;" onclick="display('/')" id="operatorbutton" /> </td>
+
+    </tr>
+  <tr>
+    <td> <input type="button" value="7" onclick="display('7')" id="numberbutton"/> </td>
+    <td> <input type="button" value="8" onclick="display('8')" id="numberbutton"/> </td>
+    <td> <input type="button" value="9" onclick="display('9')" id="numberbutton"/> </td>
+	<td> <input type="button" value="&#xd7;" onclick="display('*')" id="operatorbutton" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="4" onclick="display('4')" id="numberbutton"/> </td>
+    <td> <input type="button" value="5" onclick="display('5')" id="numberbutton"/> </td>
+    <td> <input type="button" value="6" onclick="display('6')" id="numberbutton"/> </td>
+    <td> <input type="button" value="&#x2212;" onclick="display('-')" id="operatorbutton" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="1" onclick="display('1')" id="numberbutton"/> </td>
+    <td> <input type="button" value="2" onclick="display('2')" id="numberbutton"/> </td>
+    <td> <input type="button" value="3" onclick="display('3')" id="numberbutton"/> </td>
+    <td> <input type="button" value="&#x2b;" onclick="display('+')" id="operatorbutton" /> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="0" onclick="display('0')" id="numberbutton"/> </td>
+    <td> <input type="button" value="." onclick="display('.')" id="numberbutton"/> </td>
+	<td> <input type="button" value="&#x232b;" onclick="backspace()" id="numberbutton" /> </td>
+    <td> <input type="button" value="=" onclick="result()" id="restbutton" /> </td>
+    
+  </tr>
+</table>
+ 
+</body>
+ 
+</html>
