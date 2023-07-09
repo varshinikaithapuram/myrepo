@@ -11,19 +11,18 @@ url = "https://michaelgathara.com/api/python-challenge"
 
 response = requests.get(url)
 challenges = response.json()
-print(f" ")
-print(challenges, end=" ")
+print("\n Challenge :\n" , challenges, end=" ")
 
-print(f" ")
+print("\n")
 
-print(f" ")
-
-for problem in challenges:
-    Id = problem['id']
-    expression = problem['problem'].replace('?', '')  
+for challenge in challenges:
+    ProblemId = challenge['id']
+    expr = challenge['problem'].replace('?', '')  
     
     try:
-        result = eval(expression)
-        print(f"Problem {Id} : {expression} = {result}")
-    except SyntaxError:
-        print(f"Problem {Id}'s expression is invalid : {expression}")
+        solution = eval(expr)
+        print(f"Solution for Problem {ProblemId} : {expr} = {solution}")
+    except ValueError:
+        print(f"Problem {ProblemId}'s expression is invalid : {expr}")
+        
+        
