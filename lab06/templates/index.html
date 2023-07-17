@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .form-text {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-label {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-input {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    .form-submit {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .form-ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .form-li {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-element {
+        margin-right: 10px;
+    }
+</style>
+
+<p class="form-text">Welcome to Password Check</p>
+<p class="form-text">Let's see if your Password is secure!</p>
+<p class="form-text">Fill out the form below with a User Name and password that have these restraints:</p>
+
+<ul class="form-ul">
+    <li class="form-li">Must have an uppercase letter somewhere.</li>
+    <li class="form-li">Must have a lowercase letter somewhere.</li>
+    <li class="form-li">Must have a number at the end.</li>
+</ul>
+
+<form action="/report" method="POST">
+    <div class="form-container">
+        <label for="username" class="form-label form-element">Username:</label>
+        <input type="text" id="username" name="username" class="form-input form-element" required>
+
+        <label for="password" class="form-label form-element">Password:</label>
+        <input type="password" id="password" name="password" class="form-input form-element" required>
+
+        <input type="submit" value="Submit Form" class="form-submit">
+    </div>
+</form>
+{% endblock %}

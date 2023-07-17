@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #d6d5d5; /* Light grey color */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+    }
+    .message {
+        margin-bottom: 10px;
+    }
+    .failed-message {
+        font-weight: bold;
+    }
+    .warning-message {
+        font-weight: bold;
+    }
+</style>
+
+<p class="message">Let's see if your password meets the requirements</p>
+
+{% if not passed_requirements %}
+    <p class="failed-message">Oh no! Looks like you had issues with your password!</p>
+    <p class="message">Here are the requirements you failed:</p>
+    <ul>
+        {% if not has_uppercase %}
+            <li>You did not use an uppercase character.</li>
+        {% endif %}
+        {% if not has_lowercase %}
+            <li>You did not use a lowercase character.</li>
+        {% endif %}
+        {% if not ends_with_number %}
+            <li>You did not end your password with a number.</li>
+        {% endif %}
+        {% if not length_check %}
+            <li>Password should be at least 8 characters.</li>
+        {% endif %}
+    </ul>
+{% else %}
+    <p class="message">Your password passed the 3 requirements!</p>
+{% endif %}
+
+{% if warning %}
+    <p class="warning-message">Warning: You have exceeded three consecutive failed attempts. Please check your password.</p>
+{% endif %}
+
+{% endblock %}
