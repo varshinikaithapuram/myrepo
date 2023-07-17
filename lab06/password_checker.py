@@ -29,6 +29,8 @@ def report():
     password = request.form['password']
 
     # Validate password using regex
+    contains_uppercase, contains_lowercase, ends_with_number, password_size_check = validate_password(password)
+
     password_pattern = re.compile(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d$).{8,}$')
     passed_requirements = bool(password_pattern.match(password))
 
@@ -41,8 +43,20 @@ def report():
 
     warning = failed_attempts > 3
 
-    return render_template('report.html', passed_requirements=passed_requirements, warning=warning)
+    return render_template('report.html', passed_requirements=passed_requirements,
+                           contains_uppercase=contains_uppercase, contains_lowercase=contains_lowercase,
+                           ends_with_number=ends_with_number, password_size_check=password_size_check,
+                           warning=warning)
 
+
+
+def validate_password(password):
+    contains_uppercase = any(char.isupper() for char in password)
+    contains_lowercase = any(char.islower() for char in password)
+    ends_with_number = password[-1].isdigit()
+    password_size_check = len(password) >= 8
+
+    return contains_uppercase, contains_lowercase, ends_with_number, password_size_check
 
 
 @app.route('/displayData', methods=['GET'])

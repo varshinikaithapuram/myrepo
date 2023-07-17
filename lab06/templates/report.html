@@ -25,16 +25,16 @@
     <p class="failed-message">Oh no! Looks like you had issues with your password!</p>
     <p class="message">Here are the requirements you failed:</p>
     <ul>
-        {% if not has_uppercase %}
+        {% if not contains_uppercase %}
             <li>You did not use an uppercase character.</li>
         {% endif %}
-        {% if not has_lowercase %}
+        {% if not contains_lowercase %}
             <li>You did not use a lowercase character.</li>
         {% endif %}
         {% if not ends_with_number %}
             <li>You did not end your password with a number.</li>
         {% endif %}
-        {% if not length_check %}
+        {% if not password_size_check %}
             <li>Password should be at least 8 characters.</li>
         {% endif %}
     </ul>
