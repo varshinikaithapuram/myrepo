@@ -1,0 +1,40 @@
+<!-- signin.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="white-box">
+            <div class="login-header">
+                <h2>Login to your Account</h2>
+            </div>
+            <form action="/signin" method="POST">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'error' %}
+                                <div class="flash-message">{{ message }}</div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </form>
+            <br>
+            <div class="not-a-member">
+                Not a member yet? <a href="/signup">Create an Account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

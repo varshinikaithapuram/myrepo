@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Page</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <form class="register-form" action="/signup" method="POST">
+      <h1>Register</h1>
+      <div class="font-class">
+        <p>Create your account, it's free and only takes a minute.</p>
+      </div>
+      <div class="form-group row">
+        <div class="input-field">
+          <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+        </div>
+        <div class="input-field">
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+      </div>
+      {% if email_in_use %}
+      <div class="flash-message error">Email Address already registered!</div>
+      {% endif %}
+      {% if password_not_match %}
+      <div class="flash-message error">Passwords do not match!</div>
+      {% endif %}
+      <div class="flash-messages" id="flash-messages"></div>
+      {% if didnot_passed_requirements %}
+      <div class="password-requirements flash-message error" id="password-requirements">
+
+          <p class="failed-message">Oh no! Looks like you had issues with your password!</p>
+          <p class="message">Your password should contain:</p>
+          <ul>
+           <li>Atleast one uppercase character.</li>
+           <li>Atleast one lowercase character.</li>
+           <li>Should end with a number.</li>
+           <li>Should be atleast 8 characters.</li>
+          </ul>
+
+      </div> 
+      {% endif %}
+      <button type="submit" id="register-button">Register</button>
+    </form>
+
+    <div class="font-class">Already have an account? <a href="/signin">Sign in</a></div>
+  </div>
+</body>
+
+</html>

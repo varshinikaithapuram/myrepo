@@ -1,0 +1,193 @@
+
+body {
+    font-family: Calibri;
+    background-color: #f0f2f5;
+}
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.white-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.login-header {
+     text-align: center;
+     margin-bottom: 20px;
+     color: grey;
+     font-size: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.login-btn {
+    width: 100%;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.forgot-password {
+    text-align: center;
+    margin-top: 20px;
+}
+.not-a-member {
+text-align: center;
+text-decoration: none;
+margin-top: 5px;
+font-size: 20px;
+}
+input::placeholder {
+font-size: 20px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .register-form {
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h1 {
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  
+  button {
+    width: 105%;
+    padding: 10px;
+    background: green; 
+    border: 1px solid #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: middle;
+  }
+  
+  button:hover {
+    background: green; 
+  }
+  
+  .font-class {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  
+  .form-group.row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-group.row .input-field {
+    width: calc(50% - 15px);
+  }
+  
+
+.flash-message {
+    font-size: 18px; /* Adjust the font size as per your preference */
+    color: red; /* Change the color to red */
+    margin-top: 10px; /* Optional: Add some spacing between the login button and the flash message */
+}
+
+body.thank-you-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.tick-mark {
+    font-size: 48px;
+    color: green;
+    display: block;
+}
+
+
+body.secret-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.message {
+    text-align: center;
+}
+
+.big-text {
+    font-size: 36px;
+    font-weight: bold;
+}
