@@ -1,0 +1,11 @@
+CREATE DATABASE STUDENT_DB;
+
+USE STUDENT_DB;
+
+CREATE TABLE student_grades (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    midterm1 INT NOT NULL,
+    midterm2 INT NOT NULL,
+    final INT NOT NULL,
+);
